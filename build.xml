@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project sarja with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR file Export Wizard-->
+    <!--ANT 1.7 is required-->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="D:/Eclipsen kakka/kakat"/>
+    <property name="dir.jarfile" value="C:/Users/tomih/Desktop"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.jarfile}/SarjaRekisteri.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="fxSarja.SarjaMain"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ Ali.jar fxgui.jar Graphics.jar Music.jar org.junit.jupiter.api_5.5.1.v20190826-0900.jar org.junit.jupiter.engine_5.5.1.v20190826-0900.jar org.junit.jupiter.migrationsupport_5.5.1.v20190826-0900.jar org.junit.jupiter.params_5.5.1.v20190826-0900.jar org.junit.platform.commons_1.5.1.v20190826-0900.jar org.junit.platform.engine_1.5.1.v20190826-0900.jar org.junit.platform.launcher_1.5.1.v20190826-0900.jar org.junit.platform.runner_1.5.1.v20190826-0900.jar org.junit.platform.suite.api_1.5.1.v20190826-0900.jar org.junit.vintage.engine_5.5.1.v20190826-0900.jar org.opentest4j_1.2.0.v20190826-0900.jar org.apiguardian_1.1.0.v20190826-0900.jar junit.jar org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="${dir.buildfile}/bin"/>
+            <zipfileset dir="D:/Eclipsen kakka/eclipse/ohj2_library" includes="Ali.jar"/>
+            <zipfileset dir="D:/Eclipsen kakka/eclipse/ohj2_library" includes="fxgui.jar"/>
+            <zipfileset dir="D:/Eclipsen kakka/eclipse/ohj2_library" includes="Graphics.jar"/>
+            <zipfileset dir="D:/Eclipsen kakka/eclipse/ohj2_library" includes="Music.jar"/>
+            <zipfileset dir="D:/Eclipsen kakka/eclipse/plugins" includes="org.junit.jupiter.api_5.5.1.v20190826-0900.jar"/>
+            <zipfileset dir="D:/Eclipsen kakka/eclipse/plugins" includes="org.junit.jupiter.engine_5.5.1.v20190826-0900.jar"/>
+            <zipfileset dir="D:/Eclipsen kakka/eclipse/plugins" includes="org.junit.jupiter.migrationsupport_5.5.1.v20190826-0900.jar"/>
+            <zipfileset dir="D:/Eclipsen kakka/eclipse/plugins" includes="org.junit.jupiter.params_5.5.1.v20190826-0900.jar"/>
+            <zipfileset dir="D:/Eclipsen kakka/eclipse/plugins" includes="org.junit.platform.commons_1.5.1.v20190826-0900.jar"/>
+            <zipfileset dir="D:/Eclipsen kakka/eclipse/plugins" includes="org.junit.platform.engine_1.5.1.v20190826-0900.jar"/>
+            <zipfileset dir="D:/Eclipsen kakka/eclipse/plugins" includes="org.junit.platform.launcher_1.5.1.v20190826-0900.jar"/>
+            <zipfileset dir="D:/Eclipsen kakka/eclipse/plugins" includes="org.junit.platform.runner_1.5.1.v20190826-0900.jar"/>
+            <zipfileset dir="D:/Eclipsen kakka/eclipse/plugins" includes="org.junit.platform.suite.api_1.5.1.v20190826-0900.jar"/>
+            <zipfileset dir="D:/Eclipsen kakka/eclipse/plugins" includes="org.junit.vintage.engine_5.5.1.v20190826-0900.jar"/>
+            <zipfileset dir="D:/Eclipsen kakka/eclipse/plugins" includes="org.opentest4j_1.2.0.v20190826-0900.jar"/>
+            <zipfileset dir="D:/Eclipsen kakka/eclipse/plugins" includes="org.apiguardian_1.1.0.v20190826-0900.jar"/>
+            <zipfileset dir="D:/Eclipsen kakka/eclipse/plugins/org.junit_4.12.0.v201504281640" includes="junit.jar"/>
+            <zipfileset dir="D:/Eclipsen kakka/eclipse/plugins" includes="org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
+        </jar>
+    </target>
+</project>
